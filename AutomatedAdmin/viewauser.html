@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Automated</title>
+    <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <!-- <h1>Welcome to the Admin Page</h1> -->
+    <header>
+        <div class="logo">
+           <a onclick="hide()" href="">Automy</a> 
+           
+        </div>
+        <nav class="big-header">
+            <div class="searchbar">
+                <input type="search" name="" placeholder="Search for users" id="">
+            </div>
+            <div class="submitbtn">
+                <input type="submit" value="Search">
+            </div>
+            <div class="adminlogout-btn">
+                <a href="adminlogin.html">Logout</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="big-sidebar">
+        <div class="left-sidebar">
+            <a  href="admin.html">
+                <i class="fa fa-pie-chart"></i>    
+                <p>Admin Dashboard</p> 
+            </a>
+            <a  href="adminuserprofile.html">
+                <i class="fa fa-user"></i>
+                <p>User Profile</p> 
+            </a>
+            <a class="current" href="viewusers.html">
+                <i class="fa fa-users"> </i>
+                <p>View Users</p> 
+            </a>
+            <a href="">
+                <i class="fa fa-map-marker"></i>
+                <p>Maps</p>
+            </a>
+            <a href="">
+                <i class="fa fa-area-chart"></i>
+                <p>Charts</p>
+            </a>
+            <a href="">
+                <i class="fa fa-bell"></i>
+                <p>Notifications</p>
+            </a>
+         </div>
+         <div class="main-content">
+                <form action="" method="post" class="form-user">
+                    <div class="formimg">
+                        <img src="image/wiz.jpg" alt="">
+                    </div>
+                    <div class="formdetails">
+                        <h2>First Name Last Name</h2>
+                        <h4>@Username</h4>
+                        <div class="firstrow">
+                            <p><b>Email: </b>kachi@gmail.com</p>
+                            <p><b>Date Of Birth: </b> 19/10/1994</p>
+                        </div> 
+                        <div class="secondrow">
+                            <p><b>Phone No: </b>+234809832424</p>
+                            <p><b>Gender: </b> Male</p>
+                        </div>
+                        <div class="thirdrow">
+                            <p><b>Age: </b>24</p>
+                            <p><b>Weight: </b>40kg</p>
+                        </div>
+                        
+                        <p><b>Home Address: </b>N0 28 Lekki Phase 2 Lagos Island</p>
+                        <div class="fourrow">
+                            <p><b>City: </b>Lagos</p>
+                            <p><b>Country: </b>Nigeria</p>
+                            <p><b>ZipCode: </b>909278</p>
+                        </div>
+                    </div>
+                    <input type="submit" value="Update User">
+                </form>
+            
+         </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script>
+        function hide(){
+              $('#left-sidebar').toggleClass("display");
+        }
+    </script>
+</body>
+</html>

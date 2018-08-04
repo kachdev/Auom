@@ -1,0 +1,481 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'myfont';
+    text-decoration: none;
+    list-style-type: none;
+}
+body,html{
+    height: 100%;
+}
+@font-face{
+    font-family: 'myfont';
+    src: url('../fonts/ubuntu/Ubuntu-M.ttf');
+}
+
+header{
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    background: #033259;
+
+}
+.logo{
+    width: 20%;
+    
+}
+.logo a{
+    color: white;
+    font-size: 30px;
+}
+.big-header{
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    /* width: 80%; */
+}
+
+.searchbar{
+    width: 70%;
+}
+
+.searchbar input[type=search]{
+    display: inline-block;
+    margin: 8px 0px;
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all ease-in 0.5s;
+}
+.searchbar input[type=search]:focus{
+    border: 1.5px solid #2C4E81;
+}
+.submitbtn{
+    width: 14%;
+    display: flex;
+	flex-grow: 1;
+	align-items: center;
+}
+.submitbtn input[type=submit]{
+    display: inline-block;
+    margin: 8px -110px;
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #034C88;
+    border-radius: 3px; 
+    cursor: pointer;
+    color: white;
+    background: #034C88;
+    transition: all ease-in 0.5s;
+}
+.submitbtn input[type=submit]:hover{
+    color: #B16A0C;
+    background: #021F37;
+    transition: all ease-in 0.5s;
+}
+
+
+.adminlogout-btn{
+    width: 40%;
+    padding-left: 300px;
+}
+
+.adminlogout-btn a{
+    color: white;
+    transition: all ease-in 0.5s;
+}
+.adminlogout-btn a:hover{
+    color: #B16A0C;
+    transition: all ease-in 0.5s;
+}
+.big-sidebar{
+    display: flex;
+    align-items: center; 
+    height:calc(100% - 65px);
+    background: grey;  
+}
+.display{
+    width:0px !important;
+    overflow: hidden;
+    transition:all linear 0.3s;
+}
+.left-sidebar{
+    background: #033259; 
+    width:20%;
+    height:100%;
+    transition:all linear 0.3s;
+}
+
+.left-sidebar a:hover:not(.current){
+    background: rgba(2, 42, 72, 0.75); 
+    transition:all linear 0.2s;
+    color: #B16A0C;
+}
+
+.left-sidebar a{
+    display: flex;
+    align-items: center;
+    padding: 20px 10px;
+    color: white;
+}
+.left-sidebar a i{
+    width: 30px;
+    
+}
+.left-sidebar .fa.fa-angle-down{
+    float: right;
+    margin-left: 40px;
+}
+
+
+#panel{display: none;}
+/* .left-sidebar li.taps ul{display: block;}  */
+
+#has-sub ul a{
+    padding-left: 30px;
+}
+
+
+.current{
+    background: rgba(1, 30, 51, 0.98);
+    color: #B16A0C;
+}
+.main-content{
+    background: #F5F4F4;
+    height:100%;
+    display: flex;
+    flex-grow: 1;
+    overflow: auto;
+}
+
+.form-wrapper{
+    padding: 18px 20px;
+    margin: 8px 10px;
+    background: #FFFFFF;
+    border:1px solid #E3E3E3;
+    border-radius: 5px;
+    width: 100%;
+    color: #C2C2C2;
+}
+.firstformrow{
+    display: flex;
+    justify-content: center;
+}
+.firstformrow{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.secondformrow{
+    display: flex;
+    justify-content: center;
+}
+.thirdformrow{
+    display: flex;
+    justify-content: center;
+}
+
+._thirdformrow, input[type=radio]{
+    padding: 20px 25px;
+    color: black;
+    text-align: center;
+}
+
+._thirdformrow h2{
+    color:black;
+    text-align: center;
+}
+.fourthformrow {
+    display: flex;
+    align-items: center;
+}
+.fourthformrow input[type=text] {
+    flex-grow: 1;
+    width: 100%;
+}
+.fifthformrow{
+    display: flex;
+
+}
+.fifthformrow,input[type=text]
+{
+    width: 66.7%;
+}
+.sixthformrow{
+    display: flex;
+    align-items: center;
+}
+
+.form-wrapper input[type=text],[type=date],[type=time],[type=file], select{
+    display: inline-block;
+    margin: 8px 0px;
+    width: 50%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-wrapper input[type=email]{
+    display: inline-block;
+    margin: 8px 0px;
+    width: 50%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.fourformrow input[type=text]{
+    display: inline-block;
+    margin: 8px 0px;
+    width: 33.3%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+.form-wrapper input[type=submit], [type=button]
+{
+    display: block;
+    margin: 8px 0px;
+    width: 100%;
+    padding: 12px 12px;
+    border: 1px solid #034C88;
+    border-radius: 3px; 
+    cursor: pointer;
+    color: white;
+    background: #034C88;
+    transition:all linear 0.3s;
+}
+.form-wrapper input[type=submit]:hover{
+    color: #B16A0C;
+    background: #021F37;
+    border: 1px solid #021F37;
+    transition:all linear 0.3s;
+}
+
+.right-sidebar{
+    padding: 18px 20px;
+    margin: 8px 10px;
+    border: 1px solid #ccc;
+    background: #FFFFFF;
+    border-radius: 5px;
+    width: 30%;
+    height: 460px;
+}
+.cardimg{
+    width: 100%;
+    display: flex;
+}
+.cardimg img{
+    border-radius: 50%;
+    border-color: #EEEEEE;
+    width: 124px;
+    height: 124px;
+    margin: auto;
+}
+.cardnote{
+    text-align: center;
+}
+.cardnote span{
+    color: #C9C6C6;
+    line-height: 30px;
+}    
+.cardnote p{
+    font-size: 15px;
+}
+
+
+
+.tablelist{
+    padding: 20px;
+    margin: 8px 10px;
+    border: 1px solid #ccc;
+    background: #FFFFFF;
+    width: 80%;
+}
+.selectrow select
+{
+    width: 10%;
+}
+
+ul.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+ul.pagination li {
+    display: inline;
+}
+
+ul.pagination li  {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+}
+
+ul.pagination li a:hover:not(.active) {background-color: #ddd;}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+table,th,td{
+    text-align: left;
+    padding: 7px;
+    font-size: 12px;
+    border: 1px solid #ddd;
+}
+tr:nth-child(even){
+    background: #f2f2f2;
+}
+th{
+    background: #034C88;
+    color: white;
+}
+
+td a{
+    padding: 6px;
+    color: white;
+    width:20%;
+    border-radius: 5px;
+    background: #034C88;
+    text-align: center;
+    transition:all linear 0.3s;
+    cursor: pointer;
+    font-size: 15px;
+}
+td a:hover{
+    background: #022C4F;
+    transition:all linear 0.3s;
+}
+.formbtns
+{
+    display: flex;
+    justify-content: flex-end;
+
+}
+.formbtns a{
+    padding: 14px 12px;
+    margin: 8px 8px;
+    color: white;
+    width:20%;
+    border-radius: 5px;
+    background: #026616;
+    text-align: center;
+    transition:all linear 0.3s;
+}
+.formbtns a:hover
+{
+    background: #012B09;
+    transition:all linear 0.3s;
+}
+.formbtns #deletebtn{
+    padding: 14px 12px;
+    margin: 8px 0px;
+    color: white;
+    width:20%;
+    border-radius: 5px;
+    background: #7E0303;
+    transition:all linear 0.3s;
+}
+.formbtns #deletebtn:hover{
+    background: #380000;
+    transition:all linear 0.3s;
+}
+.formimg{
+    width: 100%;
+    display: flex;
+}
+.formimg img{
+    border-radius: 50%;
+    border-color: #EEEEEE;
+    width: 124px;
+    height: 124px;
+    margin: auto;
+}
+
+.formdetails{
+    text-align: left;
+   
+}
+.formdetails h2 {
+    text-align: center;
+}
+.formdetails h4{
+    color: #C9C6C6;
+    line-height: 30px;
+    text-align: center;
+}    
+.formdetails p{
+    font-size: 15px;
+    padding: 16px 18px;
+}
+.form-user{
+    padding: 18px 20px;
+    margin: 40px auto;
+    background: #FFFFFF;
+    border:1px solid #E3E3E3;
+    border-radius: 5px;
+    width: 50%;
+    color: #C2C2C2;
+    height: 517px;
+}
+.form-user input[type=submit]{
+    padding: 16px 18px;
+    color: white;
+    width:100%;
+    border-radius: 5px;
+    background: #034C88;
+    text-align: center;
+    transition:all linear 0.3s;
+    cursor: pointer;
+    font-size: 15px;
+}
+.firstrow{
+    display: flex;
+}
+.secondrow{
+    display: flex;
+}
+.thirdrow{
+    display: flex;
+}
+.fourrow{
+    display: flex;
+}
+
+
+
+@media screen and (max-width:800px){
+    .content{
+        flex-direction: column;
+    }
+    .page, .side{
+        width: 100%;
+        height:auto;
+    }
+    
+}
+

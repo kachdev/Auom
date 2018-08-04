@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Automated</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(e){
+            $("#has-sub").click(function(){
+                $("#panel").slideDown("slow");
+            });
+        });
+    </script>
+    <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/admin.css">
+   
+    
+</head>
+<body>
+    <!-- <h1>Welcome to the Admin Page</h1> -->
+    <header>
+        <div class="logo">
+           <a onclick="hide()" href="">Dashboard</a> 
+           
+        </div>
+        <nav class="big-header">
+            <div class="searchbar">
+                <input type="search" name="" placeholder="Search for users" id="">
+            </div>
+            <div class="submitbtn">
+                <input type="submit" value="Search">
+            </div>
+            <div class="adminlogout-btn">
+                <a href="adminlogin.html">Logout</a>
+            </div>
+        </nav>
+    </header>
+
+    <nav class="big-sidebar">
+        <ul class="left-sidebar">
+            <li>
+                <a  href="admin.html">
+                    <i class="fa fa-pie-chart"></i>    
+                    <p>Admin Dashboard</p> 
+                </a>
+             </li>
+            <li>
+                <a href="adminuserprofile.html">
+                    <i class="fa fa-user"></i>
+                    <p>User Profile</p> 
+                </a>
+            </li>
+            
+            <li id="has-sub">
+                <a href="#">
+                    <i class="fa fa-users"> </i>
+                    View Users
+                    <i class="fa fa-angle-down"></i> 
+                </a>
+                
+                <ul id="panel">
+                    <!-- THE PATIENT -->
+                    <li>
+                        <a class="current"  href="patientview.html">
+                            <i class="fa fa-user"></i>
+                            <p>Patient</p>
+                        </a>
+                    </li>
+
+                    <!-- THE DOCTOR -->
+                    <li>
+                        <a href="doctorview.html">
+                            <i class="fa fa-user"></i>
+                            <p>Doctor</p>
+                        </a>
+                    </li>
+
+                    <!-- THE PHARMACIST -->
+                    <li>
+                        <a href="">
+                            <i class="fa fa-user"></i>
+                            <p>Pharmacist</p>
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+            
+            <li>
+                <a href="">
+                    <i class="fa fa-map-marker"></i>
+                    <p>Maps</p>
+                </a>
+            </li>
+
+            <li>
+                <a href="">
+                    <i class="fa fa-area-chart"></i>
+                    <p>Charts</p>
+                </a>
+            </li>
+
+            <li>
+                <a href="">
+                    <i class="fa fa-bell"></i>
+                    <p>Notifications</p>
+                </a>
+            </li>
+        </ul>    
+            
+        
+         <div class="main-content">
+            <div class="tablelist">
+                    <h2>THE PATIENT USERS</h2>
+                <select name="" id="">
+                    <option value="">update</option>
+                    
+                </select>
+                <table border="1">
+                    <tr>
+                        <th>#</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Username</th>
+                        <th></th>
+                    </tr>
+    
+                    <tr>
+                        <td>  <input type="checkbox" name="" id=""> 1</td>
+                        <td> Daniel</td>
+                        <td>Francis</td>
+                        <td>@Danifranci</td>
+                        <td><a href="viewauser.html">View</a></td>
+                    </tr>
+    
+                    <tr>
+                        <td>  <input type="checkbox" name="" id=""> 2</td>
+                        <td>Vanessa</td>
+                        <td>Bola</td>
+                        <td>@vanesb</td>
+                        <td><a href="viewauser.html">View</a></td>
+                    </tr>
+    
+                    <tr>
+                        <td>  <input type="checkbox" name="" id=""> 3</td>
+                        <td>Susan</td>
+                        <td>Ayo</td>
+                        <td>@ayosussy</td>
+                        <td><a href="viewauser.html">View</a></td>
+                    </tr>
+    
+                    <tr>
+                        <td>  <input type="checkbox" name="" id=""> 4</td>
+                        <td>Yola</td>
+                        <td>Ruth</td>
+                        <td>@rutty</td>
+                        <td><a href="viewauser.html">View</a></td>
+                    </tr>
+    
+                    <tr>
+                        <td>  <input type="checkbox" name="" id=""> 5</td>
+                        <td>Garba</td>
+                        <td>Zeno</td>
+                        <td>@Zennoge</td>
+                        <td><a href="viewauser.html">View</a></td>
+                    </tr>
+                </table>
+
+                <div class="formbtns">
+                    <a href="addpatient.html">Add Patient</a>
+                    <a  id = "deletebtn" href="">Delete Patient</a>
+                </div>
+                
+            </div>
+            
+         </div>
+        </nav>
+
+    
+    
+</body>
+</html>
